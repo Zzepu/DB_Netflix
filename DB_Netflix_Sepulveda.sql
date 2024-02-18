@@ -798,6 +798,25 @@ INSERT INTO netflix.payment_method (id, pay_type, card_type) VALUES
 	 (50, 'Apple Pay', 'china-unionpay');
 
 
+-- CONSULTAS SIMPLES
+
+-- Selecciono todos los nombres y los emails de los usuarios en donde contengan el texto 'an' en cualquier parte 
+USE netflix;
+
+SELECT
+	name
+    , email
+FROM user
+WHERE email OR name LIKE '%an%';
+
+
+-- Selecciono todos los generos y los orderno de la Z a la A
+USE netflix;
+
+SELECT
+	genre_name
+FROM genre
+ORDER BY genre_name DESC;
 
 
 
